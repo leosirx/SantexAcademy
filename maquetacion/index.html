@@ -1,56 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xacademy Clase 1 maquetacion</title>
-    <style>
-        body {
-            margin: 0;
-        }
-        p {
-            margin-right: 40px;
-        }
-        h1 {
-            margin: 0px 400px;
-            text-align: center;
-        }
-        button.redondo {
-            background-color: white;
-            border: 1px solid black;
-            border-radius: 25px;
-            padding: 0px 20px;
-            height: 32px;
-        }
-        div#introduction-actions {
-            display: flex;
-            justify-content: center;
-        }
-    </style>
-</head>
-<body>
-    <div id="header" style="border-bottom: 1px solid gray; display: flex; padding: 10px 100px; justify-content: space-between">
-        <div id="header-left">
-            <img src="logo.svg">
-        </div>
-        <div id="header-right" style="display: flex; align-items: center;">
-            <p>Nosotros</p>
-            <p>Programas</p>
-            <p>Capaciontaciones</p>
-            <p>Alianzas</p>
-            <p>Contacto</p>
-            <button class="redondo">Sumate +</button>
-        </div>
-    </div>
-    <div id="introduction" style="padding: 48px;">
-        <div id="introduction-text">
-            <h1>Somos una Fundación dedicada a mejorar la calidad de vida de las personas y su entorno, a través de la tecnología.</h1>
-        </div>
-        <div id="introduction-actions" style="margin-top: 25px;">
-            <button class="redondo">Contactanos -></button>
-            <button class="redondo" style="margin-left: 14px;">Sumate +</button>
-        </div>
-    </div>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Xacademy Clase 1 maquetacion</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=David+Libre&family=Inter&display=swap" rel="stylesheet">
+      <style>
+         body{
+         margin: 0;
+         background-color: white;
+         background-image: url('https://technologywithpurpose.org/wp-content/uploads/2022/11/twp-home.jpg') 
+         }
+         .carrousel{
+         background-image: url('https://technologywithpurpose.org/wp-content/uploads/2022/11/twp-home.jpg');
+         min-height: 500px; 
+         background-attachment: fixed;
+         background-position: bottom;
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-color: white;
+         padding: 11%;
+         }
+         p {
+         font-family: 'David Libre', serif;
+         font-family: 'Inter', sans-serif;
+         font-size: 14px;
+         line-height: 1.5
+         }
+         p.botonesSuperiores:hover{
+         cursor: pointer;
+         color: blueviolet;
+         transition: 0.1s;
+         }
+         p.botonesSuperiores {
+         margin-right: 32px;
+         font-family: 'David Libre', serif;
+         font-family: 'Inter', sans-serif;
+         color: #201b24;
+         font-weight: 550;
+         font-size: 13px;
+         }
+         div#header {
+         background-color: white;
+         height: 80px;
+         position: sticky;
+         top: 0px
+         }
+         div#introduction {
+         background-color: white;
+         padding: 70px;
+         padding-top: 70px;
+         margin-top: 0px;
+         padding-right: 30px;
+         padding-bottom: 45px;
+         margin-bottom: 0px;
+         padding-left: 30px;
+         }
+         div#impacto {
+         background-color: black;
+         padding-top: 120px;
+         margin-top: 0px;
+         padding-right: 30px;
+         padding-bottom: 136px;
+         margin-bottom: 0px;
+         padding-left: 30px;
+         }
+         div#impacto-text {
+         color: white;
+         }
+         a {
+         margin: 21px;
+         cursor: pointer;
+         }
+         h1 {
+         margin: 55px;
+         margin-top: 35px;
+         font-size: 28px;
+         text-align: center;
+         font-family: 'David Libre', serif;
+         font-family: 'Inter', sans-serif;
+         }
+         div#header-left:hover{
+         cursor: pointer;;
+         }
+         button.redondo {
+         background-color: white;
+         border: 2px solid black;
+         border-radius: 25px;
+         padding: 0px 18px;
+         height: 35px;
+         font-family: 'David Libre', serif;
+         font-family: 'Inter', sans-serif;
+         cursor: pointer;
+         }
+         button.redondo:hover {
+         background-color: black;
+         color: white;
+         cursor: pointer;
+         transition:0.2s   
+         }
+         button.sumate:hover {
+         color: rgb(255, 255, 255);
+         background-color: rgb(143, 38, 230);
+         border: 1px solid rgb(143, 38, 230);
+         border-color: rgb(255, 255, 255);
+         -webkit-text-fill-color: rgb(255, 255, 255);
+         cursor: pointer;
+         transition: 0.2s;
+         }
+         button.sumate{
+         color: rgb(143, 38, 230);
+         background-color: rgb(255, 255, 255);
+         border-radius: 25px;
+         padding: 0px 20px;
+         height: 37px;
+         border: 2px solid blueviolet;
+         }
+         div#introduction-actions {
+         display: flex;
+         justify-content: center;
+         }
+         div#impacto {
+         color: white;
+         background-color: #201b24;
+         background-position: center;
+         background-repeat: no-repeat;
+         border-width: 0px 0px 0px 0px;
+         border-color: var(--awb-color3);
+         border-style: solid;   
+         }
+         h2 {
+         font-family: 'David Libre', serif;
+         font-family: 'Inter', sans-serif;
+         font-size: 30px;
+         display: block;
+         margin-block-start: 0.83em;
+         margin-block-end: 0.83em;
+         margin-inline-start: 0px;
+         margin-inline-end: 0px;
+         }
+         .cajaNumeros {
+         padding-left: 15px;
+         padding-right: 15px;
+         }
+         .numero {
+         font-family: 'David Libre', serif;
+         font-family: 'Inter', sans-serif;
+         font-size: 50px;
+         font-weight: bold
+         }
+         .descripcion {
+         color:#8c939c;
+         font-family: 'Inter', sans-serif;
+         }
+         .signo {
+         font-family: 'David Libre', serif;
+         font-family: 'Inter', sans-serif;
+         font-size: 30px;
+         color: #6B53F0;
+         font-weight: 600;
+         }
+         .programa{
+         background-color: white;
+         color: black;
+         padding: 2px;
+         margin-bottom: 0px;
+         padding-bottom: 0px;
+         }
+         .Equipo {
+         background-color: #f4f4f5;
+         padding: 70px;
+         margin: 0px
+         }
+         .alianzas {
+         background-color: white;
+         padding: 70px;
+         margin: 0px
+         }
+         .pie {
+         background-color: #201b24;
+         padding: 70px;
+         margin: 0px
+         }
+      </style>
+   </head>
+   <body>
+      <div id="header" style="border-bottom: 1px solid gray; display: flex; padding: 0px 220px; justify-content: space-between">
+         <div id="header-left">
+            <img src="logo.svg" style="margin-left: 68%; margin-top: 20px; height: 40px;">
+         </div>
+         <div id="header-right" style="display: flex; align-items: center;">
+            <p class="botonesSuperiores">Nosotros</p>
+            <p class="botonesSuperiores">Programas</p>
+            <p class="botonesSuperiores">Capaciontaciones</p>
+            <p class="botonesSuperiores">Alianzas</p>
+            <p class="botonesSuperiores">Contacto</p>
+            <button class="redondo" style="margin-right: 14px ;">Sumate +</button>
+            <div style="margin-right: 76px;">
+               <a>
+               <img src="data:image/png;base64,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" width="12" height="12" alt="" style="margin-right: -28px;">
+               </a>
+               <a>
+               <img src="https://cdn-icons-png.flaticon.com/512/49/49068.png" width="13" height="13" alt="">
+               </a>
+            </div>
+         </div>
+      </div>
+      <div id="introduction">
+         <div id="introduction-text">
+            <h1>Somos una Fundación dedicada a mejorar<br>
+               la calidad de vida de las personas y su<br>
+               entorno, a través de la tecnología.<br>
+            </h1>
+         </div>
+         <div id="introduction-actions" style="margin-top: 25px;">
+            <button class="redondo">Contactanos ➞</button>
+            <button class="sumate" style="margin-left: 20px;">Sumate ✚</button>
+         </div>
+      </div>
+      <div id="impacto" style= " display: flex; justify-content:center;" >
+         <div id="impacto-text" style=" padding-right: 50px;" >
+            <h2 style="margin: 0px; color: var(--awb-color1); --fontSize:30; line-height: 1.2;" data-fontsize="30" data-lineheight="36px">. Impacto</h2>
+            <p style="text-align: justify; margin: center;">
+               Buscamos construir alianzas y fortalecer vínculos para<br>
+               generar una transformación real en la comunidad.<br> 
+               Trabajamos para acercar la tecnología innovadora y<br> 
+               disruptiva del sector privado hacia el sector social.<br>
+            <p>
+         </div>
+         <div class="contadores" style=" display:flex; justify-content: space-between; align-items: center;">
+            <div class="cajaNumeros">
+               <span class="numero"> 58</span>
+               <div class="descripcion"> Localidades</div>
+            </div>
+            <div class="cajaNumeros">
+               <div class="numeroConsigna" style="display: flex; align-items: center;">
+                  <span class="signo" style="font-weight: 100;"> +</span>
+                  <span class="numero"> 50</span>
+               </div>
+               <div class="descripcion">Mentores</div>
+            </div>
+            <div class="cajaNumeros">
+               <span class="numero"> 301</span>
+               <div class="descripcion"> Participantes</div>
+            </div>
+         </div>
+      </div>
+      <div class="carrousel"></div>
+      <div class="Parte baja">
+      <div class="programa" style= " display: flex; justify-content:center ;padding: 48px; padding-bottom: 0px ; padding-top: 5%; margin-top: 0px; padding-bottom: 10px; margin-bottom: 0px;">
+         <div id="programa-text" style=" padding-right: 50px; margin-right: 10px;" >
+            <h2 style="margin: 0px; margin-bottom: 30px; color: black; --fontSize:30; line-height: 1.2;" data-fontsize="30" data-lineheight="36px">. Programas</h2>
+            <img src="https://technologywithpurpose.org/wp-content/uploads/2022/11/xacademy-01-600x400.jpg"alt="img-programas" style="border-radius: 0px 30px 30px 30px;">
+         </div>
+         <div class="descripcionProgramas" style=" display:flex; justify-content: space-between; align-items: center;">
+            <div class="cajadescripcion" style="margin-left: 50px;">
+               <img src="https://technologywithpurpose.org/wp-content/uploads/2022/10/xacademy.svg" alt="" style="width: 200px;">
+               <p style="justify-content: center;">xAcademy es un programa de formación en tecnología llevado<br>
+                  adelante por la Fundación Tecnología con Propósito junto a Santex que<br>
+                  busca promover un cambio positivo en la comunidad a través de la<br>
+                  educación en IT, apuntando a lograr la inserción laboral de personas<br>    
+                  en el mundo tecnológico.<br> 
+               </p>
+               <button class="redondo" style="margin-top: 8px;">Más Info ➞</button>
+            </div>
+         </div>
+      </div>
+      <div class="programa" style= " display: flex; justify-content:center ;padding: 48px; padding-bottom: 0px ; padding-top: 0px; margin-top: 0px; padding-bottom: 10px; margin-bottom: 0px;">
+         <div class="descripcionProgramas" style=" display:flex; justify-content: space-between; align-items: center;">
+            <div class="cajadescripcion" style="margin-left: 50px;">
+               <h2 style="margin: 0px; margin-bottom: 0px; color: black;font-size: 22px; --fontSize:30; line-height: 1.2;" data-fontsize="30" data-lineheight="36px" >Robótica educativa: la tecnología del futuro</h2>
+               <p style="justify-content: center;">Durante el curso, los alumnos y alumnas a través de la robótica<br>
+                  desarrollan la curiosidad, el autodidactismo y las habilidades blandas<br>
+                  necesarias para afrontar la revolución tecnológica del siglo XXI.<br> 
+               </p>
+               <button class="redondo" style="margin-top: 8px;">Más Info ➞</button>
+            </div>
+         </div>
+         <div id="programa-text" style=" padding-left: 50px;" >
+            <img src="https://technologywithpurpose.org/wp-content/uploads/2022/11/robotica-educativa-07-600x400.jpg"alt="img-robotica" style="border-radius: 30px 30px 0px 30px;">
+         </div>
+      </div>
+      <div class="programa" style= " display: flex; justify-content:center ;padding: 48px; padding-bottom: 0px ; padding-top: 5%; margin-top: 0px; padding-bottom: 10px; margin-bottom: 0px;">
+         <div id="programa-text" style=" padding-right: 50px; margin-right: 10px;" >
+            <h2 style="margin: 0px; margin-bottom: 30px; color: black; --fontSize:30; line-height: 1.2;" data-fontsize="30" data-lineheight="36px">. Capacitaciones</h2>
+            <img src="https://technologywithpurpose.org/wp-content/uploads/2022/11/estafas-virtuales-04-600x453.jpg"alt="img-capacitaciones" style="border-radius:30px 30px 30px 0px;">
+         </div>
+         <div class="descripcionProgramas" style=" display:flex; justify-content: space-between; align-items: center;">
+            <div class="cajadescripcion" style="margin-left: 50px;">
+               <h2 style="font-size: 22px;">Estafas virtuales: ¿cómo protegernos?</h2>
+               <p style="justify-content: center;">Los canales de comunicación a través de medios digitales cobraron<br> 
+                  gran protagonismo a partir de la pandemia. Al mismo tiempo, se<br> 
+                  perfeccionan cada vez más rápido las modalidades de estafas y<br> 
+                  fraudes virtuales. En esta capacitación vas a aprender diferentes tips y<br>
+                  consejos útiles para navegar de manera más segura.<br> 
+               </p>
+               <button class="redondo" style="margin-top: 8px;">Más Info ➞</button>
+            </div>
+         </div>
+      </div>
+      <div class="programa" style= " display: flex; justify-content:center ;padding: 48px; padding-bottom: 0px ; padding-top: 0px; margin-top: 0px; padding-bottom: 10px; margin-bottom: 0px;">
+         <div class="descripcionProgramas" style=" display:flex; justify-content: space-between; align-items: center;">
+            <div class="cajadescripcion" style="margin-left: 50px;">
+               <h2 style="margin: 0px; margin-bottom: 0px; color: black;font-size: 22px; --fontSize:30; line-height: 1.2;" data-fontsize="30" data-lineheight="36px">Seguridad informática para infancias</h2>
+               <p style="justify-content: center;">¿Navegamos seguros en internet? La propuesta es una charla para<br>
+                  niños y niñas donde se brindan herramientas de seguridad y<br>
+                  autocuidado digital.<br> 
+               </p>
+               <button class="redondo" style="margin-top: 8px;">Más Info ➞</button>
+            </div>
+         </div>
+         <div id="programa-text" style=" padding-left: 50px;" >
+            <img src="https://technologywithpurpose.org/wp-content/uploads/2022/10/seguridad-informatica-para-infancias-600x398.jpg"alt="" style="border-radius:30px 30px 0px 30px;">
+         </div>
+      </div>
+      <div class="Equipo">
+         <div class="cajaEquipo" style="padding: 70px;">
+            <p>
+            </p>
+         </div>
+      </div>
+      <div class="alianzas">
+      </div>
+      <div class="pie">
+      </div>
+   </body>
 </html>
